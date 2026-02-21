@@ -63,7 +63,7 @@ The install experience is agent-first:
 
 Your agent reads the repo. Understands the spec. Walks you through integration. That's the install experience now.
 
-Universal Interface Spec: first commit February 19, 2026.
+*(Universal Interface Spec: first commit February 19, 2026 — before the industry started talking about agent-native tooling.)*
 
 ---
 
