@@ -63,6 +63,8 @@ The install experience is agent-first:
 
 Your agent reads the repo. Understands the spec. Walks you through integration. That's the install experience now.
 
+Universal Interface Spec: first commit February 19, 2026.
+
 ---
 
 ### Understand Why → [Dream Weaver Protocol](https://github.com/wipcomputer/dream-weaver-protocol)
@@ -76,6 +78,20 @@ Dream Weaver is a protocol for how agents should consolidate memory: what to kee
 Written as a practical protocol, not a paper. Designed to be implemented, not cited.
 
 If you're building agents that need to remember, start here.
+
+---
+
+### Your Files Remember Themselves → [CLVR](https://github.com/wipcomputer/CLVR)
+
+CLVR started as a macOS utility that auto-timestamps duplicated file names. That's the version you can download today.
+
+But that's the foundation, not the destination.
+
+The destination is a file memory layer. A world where your filesystem has the same temporal awareness that your agent does — where every file knows its own history, where versioning is invisible, where "undo" means going back to any point in time, not just the last save.
+
+This is the bridge between the agent's world and yours. The agent operates on files. You operate on files. Right now those are two separate realities. CLVR makes them one.
+
+Your files remember themselves. That's not a feature. That's the missing interface between human work and machine work.
 
 ---
 
@@ -105,21 +121,20 @@ Every component follows the [Universal Interface Spec](https://github.com/wipcom
 
 **Applications**
 - [wip-markdown-viewer](https://github.com/wipcomputer/wip-markdown-viewer) — Live viewer for AI pair-editing. Save a file, see it render instantly
-- [CLVR](https://github.com/wipcomputer/CLVR) — macOS utility that auto-timestamps file names. Consumer proof that agent infrastructure touches normal people's files
 
 ---
 
-## The Release Pipeline
+## The Lifecycle
 
-Three specs. One lifecycle:
+Three specs. One pipeline:
 
-| | |
-|---|---|
-| **SPEC.md** | How to build it |
-| **wip-release** | How to ship it |
-| **wip-install** | How to consume it |
+**SPEC.md** defines how to build it. **wip-release** defines how to ship it. **wip-install** defines how to consume it.
 
-`wip-release patch` bumps the version, syncs SKILL.md, updates the changelog, commits, tags, pushes, publishes to npm, GitHub Packages, creates a GitHub Release, and publishes to ClawHub. Auth pulled from 1Password at runtime. No secrets in repos. Ever.
+Build a tool following the spec. Release it with one command. Anyone — human or agent — installs every interface at once.
+
+That's the full loop. Most organizations with 10x the headcount don't have this.
+
+Details: [wip-release reference](https://github.com/wipcomputer/wip-release/blob/main/REFERENCE.md)
 
 ---
 
@@ -136,16 +151,6 @@ Your agent's tools should be discoverable, composable, and versionable — witho
 **Git** is the source of truth — timestamps on commits are receipts.
 
 The agent owns its toolchain. The human owns the agent. Nobody else is in the loop.
-
----
-
-## The Bet
-
-The runtime layer will fragment. There will be more agent harnesses, not fewer. More models, not fewer. More ways to run agents, not fewer.
-
-The teams that win are the ones building the layer underneath — the services that every agent needs regardless of which model or harness it runs on.
-
-That's what we're building. Not the models. Not the wrappers. The operating system.
 
 ---
 
