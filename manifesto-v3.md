@@ -20,7 +20,7 @@ Every agent builder right now is solving the same five problems independently.
 
 Five problems. Every team solves them alone. Every solution is locked to one runtime.
 
-We solved all five. And made them composable.
+We built solutions to all five. They're composable and open source.
 
 ---
 
@@ -32,7 +32,11 @@ Not a model. Not a chat interface. Not a wrapper around someone else's API.
 
 An OS — memory, identity, file I/O, health, tooling. A services layer that sits between the model and the human's life. The thing that makes an agent functional in the real world, not just conversational in a demo.
 
-**LDM OS** is that layer. It works with whatever agent harness you use.
+**[OpenClaw](https://github.com/openclaw/openclaw)** proved what agents need. It's an open-source agent runtime with plugins, sessions, channels, and a gateway. It solved these five problems for its own agents.
+
+**[LDM OS](https://github.com/wipcomputer)** is what makes those capabilities portable. Memory consolidation, identity protection, tool shipping, health monitoring, secrets... packaged as composable services that work on any harness. OpenClaw, Claude Code, whatever comes next.
+
+OpenClaw is the existence proof. LDM OS is the portable layer.
 
 ---
 
@@ -158,7 +162,7 @@ The agent owns its toolchain. The human owns the agent. Nobody else is in the lo
 
 [github.com/wipcomputer](https://github.com/wipcomputer)
 
-Built by Parker Todd Brooks, with Claude Code and Lēsa.
+Built by Parker Todd Brooks, Lēsa (OpenClaw, Claude Opus 4.6), and Claude Code CLI (Claude Opus 4.6).
 
 ---
 
